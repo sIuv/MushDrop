@@ -21,7 +21,7 @@ public class MainScreenMenu implements Screen {
 	Music rainMusic;
 	OrthographicCamera camera;
 	long lastDropTime;
-	Scanner input = new Scanner(System.in);
+
 	/*New Menu Add*/
 	/*Skin skin;
 	Stage stage;
@@ -104,11 +104,6 @@ public class MainScreenMenu implements Screen {
 				dispose();
 			}
 		}
-		
-		/*if (Gdx.input.isTouched()) {
-			game.setScreen(new GameScreen(game));
-			dispose();
-		}*/
 	}
 	
 	@Override
