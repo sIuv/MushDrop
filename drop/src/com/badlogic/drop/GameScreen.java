@@ -97,7 +97,14 @@ public class GameScreen implements Screen {
 			game.batch.draw(dropImage, raindrop.x, raindrop.y);
 		}
 		game.batch.end();
- 
+		
+		if( mushMissed == 0) {
+			/*Delay*/
+			while (!(TimeUtils.nanoTime() - lastDropTime > 2000000000));
+			game.setScreen(new MainScreenMenu(game));
+			dispose();			
+		}
+			
 		// process user input
 		if (Gdx.input.isTouched()) {
 			Vector3 touchPos = new Vector3();
@@ -132,6 +139,14 @@ public class GameScreen implements Screen {
 			if (raindrop.y + 64 < 0) {
 				iter.remove();
 				mushMissed -= 1;
+				
+				/*GAME OVER Sequence*/
+				if( mushMissed == 0) {
+					game.batch.begin();
+					game.font.draw(game.batch, "Lives: " + mushMissed, 0, 465);
+					game.font.draw(game.batch, "GAME OVER", 350, 245);
+					game.batch.end();
+				}
 			}
 				
 			/*Check if the mushroom got hit by 1up*/
