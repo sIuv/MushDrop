@@ -2,7 +2,7 @@ package com.badlogic.drop;
  
 import java.util.Iterator;
  
-
+import java.util.Scanner;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
@@ -99,7 +99,7 @@ public class GameScreen implements Screen {
 		game.batch.end();
 		
 		if( mushMissed == 0) {
-			/*Delay*/
+			/*Delay with exit criteria check, occurs if "game over" executes*/
 			while (!(TimeUtils.nanoTime() - lastDropTime > 2000000000));
 			game.setScreen(new MainScreenMenu(game));
 			dispose();			

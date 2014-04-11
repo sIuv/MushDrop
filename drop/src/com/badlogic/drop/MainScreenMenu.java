@@ -1,5 +1,6 @@
 package com.badlogic.drop;
 
+
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -20,7 +21,7 @@ public class MainScreenMenu implements Screen {
 	Music rainMusic;
 	OrthographicCamera camera;
 	long lastDropTime;
-	
+	Scanner input = new Scanner(System.in);
 	/*New Menu Add*/
 	/*Skin skin;
 	Stage stage;
@@ -32,7 +33,7 @@ public class MainScreenMenu implements Screen {
     
 	public MainScreenMenu(final Drop gam) {
 		game = gam;
-		
+
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 800, 480);
 		rainMusic = Gdx.audio.newMusic(Gdx.files.internal("data/o-rally.mp3"));
@@ -49,6 +50,7 @@ public class MainScreenMenu implements Screen {
 		
 		camera.update();
 		game.batch.setProjectionMatrix(camera.combined);
+
 		/*TODO 
 		 * -Add interactive menu with:
 		 * 		New game
@@ -56,8 +58,8 @@ public class MainScreenMenu implements Screen {
 		 * 		Instructions
 		 * 		Exit
 		 * */
+
 		game.batch.begin();
-		
 		game.font.draw(game.batch, myStringArray[0], 100, 125);
 		game.font.draw(game.batch, myStringArray[1], 100, 100);
 		game.font.draw(game.batch, myStringArray[2], 100, 75);
@@ -96,7 +98,7 @@ public class MainScreenMenu implements Screen {
 						break;
 					case 2: game.setScreen(new Instructions(game));
 						break;
-					case 3: //game.setScreen(new Exit(game));
+					case 3: System.exit(0);
 						break;						
 				}
 				dispose();
