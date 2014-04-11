@@ -90,7 +90,7 @@ public class MainScreenMenu implements Screen {
 			if (Gdx.input.isKeyPressed(Keys.ENTER)) {
 				lastDropTime = TimeUtils.nanoTime();
 				switch(menu_choose) {
-					case 0: game.setScreen(new GameScreen(game));
+					case 0: game.setScreen(new GameScreenPre(game));
 						break;
 					case 1: game.setScreen(new ScoreBoard(game));
 						break;
