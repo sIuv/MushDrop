@@ -31,6 +31,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+//import com.badlogic.gdx.scenes.scene2d.ui; 
  
 public class HighScoreInput implements Screen {
 	final Drop game;
@@ -56,6 +57,12 @@ public class HighScoreInput implements Screen {
 		game.batch.end();
 		
 	}
+	
+/*	public void read_input() {
+		switch(): {
+			case KEY.
+		}
+	}*/
 
 	@Override
 	public void resize(int width, int height) {
