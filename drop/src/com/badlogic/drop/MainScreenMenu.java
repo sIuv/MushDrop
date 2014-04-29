@@ -30,7 +30,7 @@ public class MainScreenMenu implements Screen, InputProcessor {
 	char c_keyTyped = (char)2;
 	int var_iter;
 
-	String str_highscore = "Kraken";
+	String str_highscore = "";
 	//var_iter = str_highscore.length();
 	
 	/*private InputMultiplexer multiPlexer;
@@ -82,7 +82,7 @@ public class MainScreenMenu implements Screen, InputProcessor {
 		
 		//c_keyTyped = var_iter;
 		//game.font.draw(game.batch, "Key typed: " + (char)var_iter, 0, 465);
-		game.font.draw(game.batch, "Key typed: " + var_iter + str_highscore, 0, 465);
+		game.font.draw(game.batch, "Key typed: " + str_highscore, 0, 465);
 		
 		
 		game.font.draw(game.batch, "~", 75, (125 - (25 * menu_choose)));
